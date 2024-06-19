@@ -4,10 +4,10 @@ pragma solidity ^0.8.20;
 import { IStEth } from "src/interfaces/lido/IStEth.sol";
 import { IMinimalAggregatorV3Interface } from "src/interfaces/IMinimalAggregatorV3Interface.sol";
 
-/// @title WstEthStEthExchangeRateAdapter
-/// @author Morpho Labs
-/// @custom:contact security@morpho.org
-/// @notice wstETH/stETH exchange rate price feed.
+/// @title EzEthToEthExchangeRateAdapter
+/// @author Origami Finance
+/// @custom:contact team@origami.finance
+/// @notice ezETH/ETH exchange rate price feed.
 /// @dev This contract should only be deployed on Ethereum.
 contract WstEthStEthExchangeRateAdapter is IMinimalAggregatorV3Interface {
     /// @inheritdoc IMinimalAggregatorV3Interface
