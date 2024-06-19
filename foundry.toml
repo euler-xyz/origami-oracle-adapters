@@ -1,6 +1,30 @@
 [profile.default]
-src = "src"
-out = "out"
-libs = ["lib"]
+  optimizer = true
+  optimizer_runs = 999_999
+  src = "src"
+  out = "out"
+  script = "script"
+  libs = ["lib"]
+  verbosity = 3
+  gas_reports = ["*"]
+  evm_version = 'cancun'
+  auto_detect_solc = false
+  solc = "0.8.25"
+  bytecode_hash = "none"
 
-# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
+[profile.lite]
+  # Speed up compilation and tests during development.
+  optimizer = false
+
+[etherscan]
+  mainnet = { key = "${ETHERSCAN_MAINNET_KEY}" }
+
+[fmt]
+  bracket_spacing = true
+  int_types = "long"
+  line_length = 120
+  multiline_func_header = "all"
+  number_underscore = "thousands"
+  quote_style = "double"
+  tab_width = 4
+  wrap_comments = true
