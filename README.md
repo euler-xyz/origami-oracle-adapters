@@ -1,66 +1,23 @@
-## Foundry
+# Origami Oracle Adapters
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+Origami Oracle Adapters are Chainlink-interface-complianat feeds to provide price data. These can be used within Origami Finance, [Morpho Blue Oracles](https://github.com/morpho-org/morpho-blue-oracles).
 
-Foundry consists of:
+## Getting Started
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+Install dependencies
 
-## Documentation
-
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
-```shell
-$ forge build
+```bash
+git submodule update --init --recursive
 ```
 
-### Test
+Set `MAINNET_RPC_URL` to the URL of an Ethereum RPC (with archive), eg Alchemy.
 
-```shell
-$ forge test
-```
+Run test: `forge test`
 
-### Format
+## Audits
 
-```shell
-$ forge fmt
-```
+All audits are stored in the [audits](./audits/)' folder.
 
-### Gas Snapshots
+## License
 
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+Morpho Blue Oracles are licensed under `GPL-2.0-or-later`, see [`LICENSE`](./LICENSE).
