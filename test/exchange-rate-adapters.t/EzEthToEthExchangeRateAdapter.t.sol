@@ -3,8 +3,8 @@ pragma solidity ^0.8.20;
 
 import { OrigamiTest } from "../OrigamiTest.sol";
 import { EzEthToEthExchangeRateAdapter } from "src/exchange-rate-adapters/EzEthToEthExchangeRateAdapter.sol";
-import { IRenzoRestakeManager } from "src/interfaces/Renzo/IRenzoRestakeManager.sol";
-import { IRenzoOracle } from "src/interfaces/Renzo/IRenzoOracle.sol";
+import { IRenzoRestakeManager } from "src/interfaces/renzo/IRenzoRestakeManager.sol";
+import { IRenzoOracle } from "src/interfaces/renzo/IRenzoOracle.sol";
 import { IERC20 } from "src/interfaces/IERC20.sol";
 
 contract EzEthToEthExchangeRateAdapterTest is OrigamiTest {

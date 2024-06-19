@@ -38,9 +38,9 @@ jobs:
         id: test
 
       - name: "Add test summary"
-      run: |
-        echo "## Unit tests result" >> $GITHUB_STEP_SUMMARY
-        echo "✅ Passed" >> $GITHUB_STEP_SUMMARY
+        run: |
+          echo "## Unit tests result" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Passed" >> $GITHUB_STEP_SUMMARY
 
   coverage:
     strategy:

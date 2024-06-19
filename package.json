@@ -1,0 +1,11 @@
+{
+  "name": "@templedao/origami-oracle-adapters",
+  "description": "Origami Oracle Adapters",
+  "license": "GPL-2.0-or-later",
+  "version": "1.0.0",
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ]
+}
