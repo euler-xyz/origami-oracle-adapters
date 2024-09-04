@@ -35,7 +35,7 @@ contract RsEthToEthExchangeRateAdapterTest is OrigamiTest {
         assertEq(uint256(answer), expectedRate);
         assertEq(uint256(answer), 1.014115456823606415e18); // Exchange rate queried at block 20066000
         assertEq(startedAt, 0);
-        assertEq(updatedAt, 0);
+        assertEq(updatedAt, block.timestamp);
         assertEq(answeredInRound, 0);
     }
 }

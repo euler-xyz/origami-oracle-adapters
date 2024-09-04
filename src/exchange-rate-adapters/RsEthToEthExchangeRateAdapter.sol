@@ -29,6 +29,6 @@ contract RsEthToEthExchangeRateAdapter is IMinimalAggregatorV3Interface {
     function latestRoundData() external view override returns (uint80, int256, uint256, uint256, uint80) {
         IKelpLRTOracle lrtOracle = IKelpLRTOracle(KELP_LRT_CONFIG.getContract(LRT_ORACLE));
         uint256 rate = lrtOracle.rsETHPrice();
-        return (0, int256(rate), 0, 0, 0);
+        return (0, int256(rate), 0, block.timestamp, 0);
     }
 }

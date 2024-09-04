@@ -24,6 +24,6 @@ contract SwEthToEthExchangeRateAdapter is IMinimalAggregatorV3Interface {
     /// @dev Returns zero for roundId, startedAt, updatedAt and answeredInRound.
     /// @dev Silently overflows if `swETHToETHRate`'s return value is greater than `type(int256).max`.
     function latestRoundData() external view override returns (uint80, int256, uint256, uint256, uint80) {
-        return (0, int256(SWETH.swETHToETHRate()), 0, 0, 0);
+        return (0, int256(SWETH.swETHToETHRate()), 0, block.timestamp, 0);
     }
 }

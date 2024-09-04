@@ -38,6 +38,6 @@ contract EzEthToEthExchangeRateAdapter is IMinimalAggregatorV3Interface {
             1 ether, EZ_ETH.totalSupply(), _currentValueInProtocol
         );
 
-        return (0, int256(rate), 0, 0, 0);
+        return (0, int256(rate), 0, block.timestamp, 0);
     }
 }

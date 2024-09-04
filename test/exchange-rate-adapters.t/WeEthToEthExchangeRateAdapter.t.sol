@@ -30,7 +30,7 @@ contract WeEthToEthExchangeRateAdapterTest is OrigamiTest {
         assertEq(uint256(answer), WEETH.getRate());
         assertEq(uint256(answer), 1.040393022914859755e18); // Exchange rate queried at block 20066000
         assertEq(startedAt, 0);
-        assertEq(updatedAt, 0);
+        assertEq(updatedAt, block.timestamp);
         assertEq(answeredInRound, 0);
     }
 }

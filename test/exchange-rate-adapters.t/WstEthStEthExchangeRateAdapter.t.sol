@@ -30,7 +30,7 @@ contract WstEthStEthExchangeRateAdapterTest is OrigamiTest {
         assertEq(uint256(answer), ST_ETH.getPooledEthByShares(1 ether));
         assertEq(uint256(answer), 1.169346470791166406e18); // Exchange rate queried at block 20066000
         assertEq(startedAt, 0);
-        assertEq(updatedAt, 0);
+        assertEq(updatedAt, block.timestamp);
         assertEq(answeredInRound, 0);
     }
 }
